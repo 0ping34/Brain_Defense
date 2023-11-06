@@ -1,0 +1,131 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Assets/Environment/UI/Buttons/red_button13.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Environment/UI/Buttons/red_button12.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Environment/Fonts/button_40.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Assets/Environment/UI/Art/db72mn8-aa61025c-f3d1-4dee-a540-039a9367ac59.jpg" type="Texture" id=4]
+[ext_resource path="res://Assets/Music/Dark__Ambient_Suspenseful_Cinematic_Action_Investigation_-_No_Copyright_Epic_Music......mp3" type="AudioStream" id=5]
+[ext_resource path="res://Assets/Music/drop_001.ogg" type="AudioStream" id=6]
+[ext_resource path="res://Scenes/UIscenes/MainMenu.gd" type="Script" id=7]
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 7 )
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 4 )
+expand = true
+
+[node name="Margin" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 50
+custom_constants/margin_top = 50
+custom_constants/margin_left = 50
+custom_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Margin"]
+margin_left = 390.0
+margin_top = 175.0
+margin_right = 890.0
+margin_bottom = 545.0
+rect_min_size = Vector2( 500, 0 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_constants/separation = 30
+alignment = 1
+
+[node name="Play" type="TextureButton" parent="Margin/VBoxContainer"]
+margin_left = 75.0
+margin_right = 425.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 350, 70 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 2 )
+expand = true
+
+[node name="Label" type="Label" parent="Margin/VBoxContainer/Play"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 3 )
+text = "Play"
+align = 1
+valign = 1
+
+[node name="Settings" type="TextureButton" parent="Margin/VBoxContainer"]
+margin_left = 75.0
+margin_top = 100.0
+margin_right = 425.0
+margin_bottom = 170.0
+rect_min_size = Vector2( 350, 70 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 2 )
+expand = true
+
+[node name="Label" type="Label" parent="Margin/VBoxContainer/Settings"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 3 )
+text = "Settings"
+align = 1
+valign = 1
+
+[node name="Credits" type="TextureButton" parent="Margin/VBoxContainer"]
+margin_left = 75.0
+margin_top = 200.0
+margin_right = 425.0
+margin_bottom = 270.0
+rect_min_size = Vector2( 350, 70 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 2 )
+expand = true
+
+[node name="Label" type="Label" parent="Margin/VBoxContainer/Credits"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 3 )
+text = "Credits"
+align = 1
+valign = 1
+
+[node name="Exit" type="TextureButton" parent="Margin/VBoxContainer"]
+margin_left = 75.0
+margin_top = 300.0
+margin_right = 425.0
+margin_bottom = 370.0
+rect_min_size = Vector2( 350, 70 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 2 )
+expand = true
+
+[node name="Label" type="Label" parent="Margin/VBoxContainer/Exit"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 3 )
+text = "Exit"
+align = 1
+valign = 1
+
+[node name="MainMenu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+pause_mode = 1
+stream = ExtResource( 6 )
+
+[connection signal="button_down" from="Margin/VBoxContainer/Play" to="." method="_on_Play_button_down"]
+[connection signal="button_up" from="Margin/VBoxContainer/Play" to="." method="_on_Play_button_up"]
+[connection signal="button_down" from="Margin/VBoxContainer/Settings" to="." method="_on_Setting_button_down"]
+[connection signal="button_up" from="Margin/VBoxContainer/Settings" to="." method="_on_Setting_button_up"]
+[connection signal="button_down" from="Margin/VBoxContainer/Credits" to="." method="_on_Credits_button_down"]
+[connection signal="button_up" from="Margin/VBoxContainer/Credits" to="." method="_on_Credits_button_up"]
+[connection signal="button_down" from="Margin/VBoxContainer/Exit" to="." method="_on_Exit_button_down"]
+[connection signal="button_up" from="Margin/VBoxContainer/Exit" to="." method="_on_Exit_button_up"]

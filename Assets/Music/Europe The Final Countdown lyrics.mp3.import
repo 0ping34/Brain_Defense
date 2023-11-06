@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Europe The Final Countdown lyrics.mp3-3672981b8438324200578a92777ee2ae.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/Europe The Final Countdown lyrics.mp3"
+dest_files=[ "res://.import/Europe The Final Countdown lyrics.mp3-3672981b8438324200578a92777ee2ae.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Dark__Ambient_Suspenseful_Cinematic_Action_Investigation_-_No_Copyright_Epic_Music......mp3-ca751580e6927cff4cc49a0b9c3b80bd.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/Dark__Ambient_Suspenseful_Cinematic_Action_Investigation_-_No_Copyright_Epic_Music......mp3"
+dest_files=[ "res://.import/Dark__Ambient_Suspenseful_Cinematic_Action_Investigation_-_No_Copyright_Epic_Music......mp3-ca751580e6927cff4cc49a0b9c3b80bd.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

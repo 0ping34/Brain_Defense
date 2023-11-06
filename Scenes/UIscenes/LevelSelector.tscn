@@ -1,0 +1,102 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Assets/Environment/Fonts/kenvector_future.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Environment/UI/Buttons/red_button12.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Environment/UI/Buttons/red_button13.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Environment/UI/Art/db72mn8-aa61025c-f3d1-4dee-a540-039a9367ac59.jpg" type="Texture" id=4]
+[ext_resource path="res://Assets/Music/drop_001.ogg" type="AudioStream" id=5]
+[ext_resource path="res://Assets/Music/Dark__Ambient_Suspenseful_Cinematic_Action_Investigation_-_No_Copyright_Epic_Music......mp3" type="AudioStream" id=6]
+[ext_resource path="res://Scenes/UIscenes/LevelSelector.gd" type="Script" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+outline_size = 2
+outline_color = Color( 0, 0, 0, 0.215686 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+outline_size = 2
+outline_color = Color( 0, 0, 0, 0.215686 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[node name="LevelSelector" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 7 )
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 4 )
+expand = true
+
+[node name="Margin" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 50
+custom_constants/margin_top = 50
+custom_constants/margin_left = 50
+custom_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Margin"]
+margin_left = 340.0
+margin_top = 208.0
+margin_right = 940.0
+margin_bottom = 512.0
+rect_min_size = Vector2( 600, 300 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Level 1" type="TextureButton" parent="Margin/VBoxContainer"]
+margin_left = 200.0
+margin_right = 400.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 200, 150 )
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 2 )
+expand = true
+
+[node name="Label" type="Label" parent="Margin/VBoxContainer/Level 1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 1 )
+text = "Level 1"
+align = 1
+valign = 1
+
+[node name="Level 2" type="TextureButton" parent="Margin/VBoxContainer"]
+margin_left = 200.0
+margin_top = 154.0
+margin_right = 400.0
+margin_bottom = 304.0
+rect_min_size = Vector2( 200, 150 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 2 )
+expand = true
+
+[node name="Label" type="Label" parent="Margin/VBoxContainer/Level 2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "Level 2"
+align = 1
+valign = 1
+
+[node name="MainMenu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+autoplay = true
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[connection signal="button_down" from="Margin/VBoxContainer/Level 1" to="." method="_on_Level_1_button_down"]
+[connection signal="button_up" from="Margin/VBoxContainer/Level 1" to="." method="_on_Level_1_button_up"]
+[connection signal="button_down" from="Margin/VBoxContainer/Level 2" to="." method="_on_Level_2_button_down"]
+[connection signal="button_up" from="Margin/VBoxContainer/Level 2" to="." method="_on_Level_2_button_up"]

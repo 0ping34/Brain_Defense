@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Jazz Theme.mp3-53d93bd6a350d040c82e804452d0d1e7.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/Jazz Theme.mp3"
+dest_files=[ "res://.import/Jazz Theme.mp3-53d93bd6a350d040c82e804452d0d1e7.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
