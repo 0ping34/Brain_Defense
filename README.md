@@ -1,1 +1,1 @@
-Joc creat in cadrul concursului Severin Bumbaru in anul 2022.Jocul a fost creat in Godot
+Joc creat in cadrul in practici de Specialitate in anul 2022.Jocul a fost creat in Godot
